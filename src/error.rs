@@ -16,6 +16,9 @@ pub enum ContractError {
 
     #[error("Invalid Asset: {asset}")]
     InvalidAsset { asset: String },
+
+    #[error("InvalidTokenURI: {uri}")]
+    InvalidTokenURI { uri: String },
 }
 
 impl From<OverflowError> for ContractError {
